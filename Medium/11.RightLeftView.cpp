@@ -1,4 +1,4 @@
-// right view = last node of every level (iterative)
+// right view = last node of every level (iterative) : via level order traversal
 
 // or if you traverse tree from right, it is the first element you find
 

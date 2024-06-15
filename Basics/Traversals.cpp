@@ -102,9 +102,13 @@ vector<vector<int>> levelOrder(TreeNode* root) {
 
     while (!q.empty()) {
         vector<int> level; //Stores the current level.
-        int n = q.size();
+        int n = q.size(); // the prevoius level is now processed by the below for loop 
+
+
         // this is done as for checking for the next level i.e children of nodes in curr level
         // check for each of them n times (no. of nodes in current level)
+
+
         for (int i = 0; i < n; i++) {
             TreeNode* curr = q.front();
             q.pop();
@@ -113,7 +117,7 @@ vector<vector<int>> levelOrder(TreeNode* root) {
 
             //out the next level in queue if it exists
             if (curr->left) {
-                q.push(curr->left);
+                q.push(curr->left); // store the next level in q. it will be processed in the next while and for loop iteration
             }
             if (curr->right) {
                 q.push(curr->right);
